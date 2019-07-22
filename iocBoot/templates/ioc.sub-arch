@@ -1,0 +1,18 @@
+# Each evr IOC needs one of these
+
+file archive_iocAdmin.tpl-arch
+{
+	{	IOC = "$$IOC_PV"	}
+}
+
+file archive_SR.tpl-arch
+{
+	{	IOC = "$$IOC_PV"	}
+}
+
+$$LOOP(PDU)
+file $$(TYPE)Pdu_$$(N_CHAN).archive
+{
+    { PRE = "$$NAME" }
+}
+$$ENDLOOP(PDU)

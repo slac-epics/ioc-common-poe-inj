@@ -1,0 +1,14 @@
+# Autosave file for IOC
+
+# Each evr IOC needs one of these
+file autosave_iocAdmin.tpl-req
+{
+    { IOC = "$$IOC_PV" }
+}
+
+$$LOOP(PDU)
+file $$(TYPE)Pdu_$$(N_CHAN).req
+{
+    { PRE = "$$NAME" }
+}
+$$ENDLOOP(PDU)

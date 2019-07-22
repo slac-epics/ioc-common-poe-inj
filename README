@@ -1,0 +1,37 @@
+To test snmp via the command line
+cd to a directory containing WIENER-CRATE-MIB.txt or make sure it's
+already loaded into /usr/share/snmp/mibs
+
+To get a single value:
+    snmpget -v2c -M +mibs -c public <pdu_net_name> Sentry3-MIB:outletID.1.1.2
+
+To show all variables on the pdu:
+    snmpwalk -v2c -M +mibs -c public <pdu_net_name> Sentry3-MIB:ServerTech
+
+See MIB files for other variables.
+
+For Leviton and Sentry units, factory userid/passwd: admn / admn
+
+Sentry units default to a blank SET community keyword, so chances are
+all set commands will fail. Check the Network SNMP settings
+on the Sentry PDU's web page (just use it's network name as the URL).
+Alternatively, ssh in and issue the command:
+    set snmp setcomm private
+
+By default, after any reboot of the PDU, the outletWakeupState is set to
+on (3).  This should probably be off (2) or possibly last (1).  turn this
+off with a csh script like:
+    setenv MIBDIRS /reg/g/pcds/epics/ioc/common/Leviton/R2.3.3/mibs:/usr/share/snmp/mibs:/reg/g/pcds/package/net-snmp-5.7.2/share/snmp/mibs
+    set i = 1
+    while ($i <= 24) 
+	snmpset -v2c -M +mibs -c public power-tst-sentry01 Sentry3-MIB:outletWakeupState.1.1.$i i 2
+	@ i = $i + 1
+    end
+
+--------------------------------------------------
+It should be noted that the 24-port sentry unit is a *lot* different
+than the others.  No per outlet load management, for one, and 24-ports
+have difficulty with snmp polling (a common problem!).  This IOC (and
+only this IOC) has been switched to using an snmpwalk to alleviate the
+issue, and the timing for turning on/off outlets has been increased.
+
