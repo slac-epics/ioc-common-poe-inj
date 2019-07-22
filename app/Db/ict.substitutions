@@ -4,3 +4,11 @@ file ictPdu.template
 		FOO = "whatever"
 	}
 }
+
+file ictPduChannel.template
+{
+	pattern
+	{ CH }
+	{  0 }
+	{  1 }
+}

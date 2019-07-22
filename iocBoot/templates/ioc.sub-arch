@@ -1,6 +1,6 @@
 # Each evr IOC needs one of these
 
-file archive_iocAdmin.tpl-arch
+file ictIoc.archive
 {
 	{	IOC = "$$IOC_PV"	}
 }
@@ -11,7 +11,7 @@ file archive_SR.tpl-arch
 }
 
 $$LOOP(PDU)
-file $$(TYPE)Pdu_$$(N_CHAN).archive
+file ictPdu.archive
 {
     { PRE = "$$NAME" }
 }

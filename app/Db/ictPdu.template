@@ -1,0 +1,13 @@
+record(stringin,"$(PRE):GetModel")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP,  "@$(HOST) write ICT-MIB::deviceModel.0" )
+	field( SCAN, "I/O Intr" )
+}
+
+record(stringin, "$(PRE):GetFirmwareVersion")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP,  "@$(HOST) write ICT-MIB::deviceFirmware.0")
+	field( SCAN, "I/O Intr" )
+}
