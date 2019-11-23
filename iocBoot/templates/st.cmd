@@ -38,20 +38,26 @@ snmpMaxVarsPerMsg( $$IF(SNMP_MAX_PER_QUERY,$$SNMP_MAX_PER_QUERY,30) )
 dbLoadRecords( "db/iocSoft.db",				"IOC=$(IOC_PV)" )
 dbLoadRecords( "db/iocRelease.db",			"IOC=$(IOC_PV)" )
 
-# Load pdu instances
+# Configure the ICT
 $$LOOP(PDU)
 dbLoadRecords( "db/ict.db", "HOST=$$HOST,PRE=$$NAME" )
-
+$$IF(BUS_A)
+dbLoadRecords( "db/ict$$(BUS_A)VbusA.db", "HOST=$$HOST,PRE=$$NAME" )
+$$ENDIF(BUS_A)
+$$IF(BUS_B)
+dbLoadRecords( "db/ict$$(BUS_B)VbusB.db", "HOST=$$HOST,PRE=$$NAME" )
+$$ENDIF(BUS_B)
 epicsEnvSet( "DEV_INFO", "DEV=$$NAME,IOC=$(IOC_PV),IOCNAME=$(IOCNAME)" )
 epicsEnvSet( "DEV_INFO", "$(DEV_INFO),COM_TYPE=snmp,COM_PORT=$$HOST" )
 dbLoadRecords( "db/devIocInfo.db",			"$(DEV_INFO)" )
+
 $$ENDLOOP(PDU)
 
 read_mib( "$(IOCTOP)/mibs/SNMPv2-SMI.txt" )  # These must be before Snmp2cWalk!
 read_mib( "$(IOCTOP)/mibs/SNMPv2-TC.txt" )
 read_mib( "$(IOCTOP)/mibs/ict_distribution_series_mib.mib" )
 $$LOOP(PDU)
-Snmp2cWalk("$$HOST", "write", "ICT-MIB::deviceModel", 10, 2.0)  ## MCB this count is certainly wrong!
+Snmp2cWalk("$$HOST", "write", "ICT-MIB::deviceModel", 95, 2.0)
 $$ENDLOOP(PDU)
 
 # Setup autosave
@@ -84,4 +90,3 @@ create_monitor_set( "$(IOCNAME).req",    5,  "" )
 
 # All IOCs should dump some common info after initial startup.
 < $(IOC_COMMON)/All/post_linux.cmd
-

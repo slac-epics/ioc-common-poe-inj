@@ -1,0 +1,425 @@
+# ICT200DB-12IRC PDU db template for 48V bus
+
+# busName: string
+record(stringin,"$(PRE,undefined):BusB" )
+{
+        field( DTYP, "SnmpV2c" )
+        field( INP, "@$(HOST,undefined) write ICT-MIB::busName.1 " )
+        field( SCAN, "I/O Intr" )
+        field( DESC, "48V BUS" )
+}
+
+# busVoltage: string
+record(ai,"$(PRE,undefined):BusB:Voltage" )
+{
+        field( DTYP, "SnmpV2c" )
+        field( INP, "@$(HOST,undefined) write ICT-MIB::busVoltage.1 " )
+        field( SCAN, "I/O Intr" )
+        field( HIGH, "49.5" )
+        field( HSV, "MINOR" )
+        field( HIHI, "51" )
+        field( HHSV, "MAJOR" )
+        field( LOW, "46.5" )
+        field( LSV, "MINOR" )
+        field( LOLO, "45" )
+        field( LLSV, "MAJOR" )
+        field( PINI, "YES" )
+}
+
+# busCurrent: string
+record(ai,"$(PRE,undefined):BusB:Current" )
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::busCurrent.1 " )
+	field( SCAN, "I/O Intr" )
+        field( HIGH, "90" )
+        field( HSV, "MINOR" )
+        field( HIHI, "100" )
+        field( HHSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputName: string
+record(stringin,"$(PRE,undefined):Output1B" )
+{   
+        field( DTYP, "SnmpV2c" )
+        field( INP, "@$(HOST,undefined) write ICT-MIB::outputName.6 " )
+        field( SCAN, "I/O Intr" )
+        field( DESC, "48V output" )
+}
+
+# outputName: string
+record(stringin,"$(PRE,undefined):Output2B" )
+{   
+        field( DTYP, "SnmpV2c" )
+        field( INP, "@$(HOST,undefined) write ICT-MIB::outputName.7 " )
+        field( SCAN, "I/O Intr" )
+        field( DESC, "48V output" )
+}
+
+# outputName: string
+record(stringin,"$(PRE,undefined):Output3B" )
+{   
+        field( DTYP, "SnmpV2c" )
+        field( INP, "@$(HOST,undefined) write ICT-MIB::outputName.8 " )
+        field( SCAN, "I/O Intr" )
+        field( DESC, "48V output" )
+}
+
+# outputName: string
+record(stringin,"$(PRE,undefined):Output4B" )
+{   
+        field( DTYP, "SnmpV2c" )
+        field( INP, "@$(HOST,undefined) write ICT-MIB::outputName.9 " )
+        field( SCAN, "I/O Intr" )
+        field( DESC, "48V output" )
+}
+
+# outputName: string
+record(stringin,"$(PRE,undefined):Output5B" )
+{   
+        field( DTYP, "SnmpV2c" )
+        field( INP, "@$(HOST,undefined) write ICT-MIB::outputName.10 " )
+        field( SCAN, "I/O Intr" )
+        field( DESC, "48V output" )
+}
+
+# outputName: string
+record(stringin,"$(PRE,undefined):Output6B" )
+{   
+        field( DTYP, "SnmpV2c" )
+        field( INP, "@$(HOST,undefined) write ICT-MIB::outputName.11 " )
+        field( SCAN, "I/O Intr" )
+        field( DESC, "48V output" )
+}
+
+# outputCurrent: string 
+record(ai,"$(PRE,undefined):Output1B:Current")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputCurrent.6" )
+	field( SCAN, "I/O Intr" )
+	field( HIGH, "12" )
+	field( HSV, "MINOR" )
+	field( HIHI, "14.5" )
+	field( HHSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputCurrent: string 
+record(ai,"$(PRE,undefined):Output2B:Current")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputCurrent.7" )
+	field( SCAN, "I/O Intr" )
+	field( HIGH, "12" )
+	field( HSV, "MINOR" )
+	field( HIHI, "14.5" )
+	field( HHSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputCurrent: string 
+record(ai,"$(PRE,undefined):Output3B:Current")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputCurrent.8" )
+	field( SCAN, "I/O Intr" )
+	field( HIGH, "12" )
+	field( HSV, "MINOR" )
+	field( HIHI, "14.5" )
+	field( HHSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputCurrent: string 
+record(ai,"$(PRE,undefined):Output4B:Current")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputCurrent.9" )
+	field( SCAN, "I/O Intr" )
+	field( HIGH, "12" )
+	field( HSV, "MINOR" )
+	field( HIHI, "14.5" )
+	field( HHSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputCurrent: string 
+record(ai,"$(PRE,undefined):Output5B:Current")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputCurrent.10" )
+	field( SCAN, "I/O Intr" )
+	field( HIGH, "12" )
+	field( HSV, "MINOR" )
+	field( HIHI, "14.5" )
+	field( HHSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputCurrent: string 
+record(ai,"$(PRE,undefined):Output6B:Current")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputCurrent.11" )
+	field( SCAN, "I/O Intr" )
+	field( HIGH, "12" )
+	field( HSV, "MINOR" )
+	field( HIHI, "14.5" )
+	field( HHSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputFuseStatus: INTEGER { ok(1), open(2) } 
+record(mbbi,"$(PRE,undefined):Output1B:BreakerStatus")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputFuseStatus.6 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "OK" )
+	field( ONST, "OPEN" )
+	field( ZRSV, "NO_ALARM" )
+	field( ONSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputFuseStatus: INTEGER { ok(1), open(2) } 
+record(mbbi,"$(PRE,undefined):Output2B:BreakerStatus")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputFuseStatus.7 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "OK" )
+	field( ONST, "OPEN" )
+	field( ZRSV, "NO_ALARM" )
+	field( ONSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputFuseStatus: INTEGER { ok(1), open(2) } 
+record(mbbi,"$(PRE,undefined):Output3B:BreakerStatus")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputFuseStatus.8 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "OK" )
+	field( ONST, "OPEN" )
+	field( ZRSV, "NO_ALARM" )
+	field( ONSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputFuseStatus: INTEGER { ok(1), open(2) } 
+record(mbbi,"$(PRE,undefined):Output4B:BreakerStatus")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputFuseStatus.9 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "OK" )
+	field( ONST, "OPEN" )
+	field( ZRSV, "NO_ALARM" )
+	field( ONSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputFuseStatus: INTEGER { ok(1), open(2) } 
+record(mbbi,"$(PRE,undefined):Output5B:BreakerStatus")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputFuseStatus.10 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "OK" )
+	field( ONST, "OPEN" )
+	field( ZRSV, "NO_ALARM" )
+	field( ONSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputFuseStatus: INTEGER { ok(1), open(2) } 
+record(mbbi,"$(PRE,undefined):Output6B:BreakerStatus")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputFuseStatus.11 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "OK" )
+	field( ONST, "OPEN" )
+	field( ZRSV, "NO_ALARM" )
+	field( ONSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbi,"$(PRE,undefined):Output1A:GetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputEnable.0 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLED" )
+	field( ONST, "DISABLED" )
+	field( PINI, "YES" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbi,"$(PRE,undefined):Output1B:GetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputEnable.6 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLED" )
+	field( ONST, "DISABLED" )
+	field( PINI, "YES" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbo,"$(PRE,undefined):Output1B:SetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( OUT, "@$(HOST,undefined) write ICT-MIB::outputEnable.6 " )
+	field( SCAN, "Passive" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLE" )
+	field( ONST, "DISABLE" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbi,"$(PRE,undefined):Output2B:GetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputEnable.7 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLED" )
+	field( ONST, "DISABLED" )
+	field( PINI, "YES" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbo,"$(PRE,undefined):Output2B:SetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( OUT, "@$(HOST,undefined) write ICT-MIB::outputEnable.7 " )
+	field( SCAN, "Passive" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLE" )
+	field( ONST, "DISABLE" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbi,"$(PRE,undefined):Output3B:GetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputEnable.8 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLED" )
+	field( ONST, "DISABLED" )
+	field( PINI, "YES" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbo,"$(PRE,undefined):Output3B:SetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( OUT, "@$(HOST,undefined) write ICT-MIB::outputEnable.8 " )
+	field( SCAN, "Passive" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLE" )
+	field( ONST, "DISABLE" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbi,"$(PRE,undefined):Output4B:GetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputEnable.9 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLED" )
+	field( ONST, "DISABLED" )
+	field( PINI, "YES" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbo,"$(PRE,undefined):Output4B:SetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( OUT, "@$(HOST,undefined) write ICT-MIB::outputEnable.9 " )
+	field( SCAN, "Passive" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLE" )
+	field( ONST, "DISABLE" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbi,"$(PRE,undefined):Output5B:GetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputEnable.10 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLED" )
+	field( ONST, "DISABLED" )
+	field( PINI, "YES" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbo,"$(PRE,undefined):Output5B:SetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( OUT, "@$(HOST,undefined) write ICT-MIB::outputEnable.10 " )
+	field( SCAN, "Passive" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLE" )
+	field( ONST, "DISABLE" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbi,"$(PRE,undefined):Output6B:GetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::outputEnable.11 " )
+	field( SCAN, "I/O Intr" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLED" )
+	field( ONST, "DISABLED" )
+	field( PINI, "YES" )
+}
+
+# outputEnable: INTEGER { enabled(1), disabled(2) } 
+record(mbbo,"$(PRE,undefined):Output6B:SetState")
+{
+	field( DTYP, "SnmpV2c" )
+	field( OUT, "@$(HOST,undefined) write ICT-MIB::outputEnable.11 " )
+	field( SCAN, "Passive" )
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( ZRST, "ENABLE" )
+	field( ONST, "DISABLE" )
+}

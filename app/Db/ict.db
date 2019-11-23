@@ -1,0 +1,203 @@
+# ICT200DB-12IRC PDU db template
+
+# deviceModel: string
+record(stringin,"$(PRE,undefined):GetDeviceModel")
+{
+        field( DTYP, "SnmpV2c" )
+        field( INP,  "@$(HOST,undefined) write ICT-MIB::deviceModel.0" )
+        field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )
+}
+
+# deviceName: string
+record(stringin,"$(PRE,undefined):GetDeviceName")
+{
+        field( DTYP, "SnmpV2c" )
+        field( INP,  "@$(HOST,undefined) write ICT-MIB::deviceName.0" )
+        field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )
+}
+
+# deviceHardware: Integer (0..127)
+record(stringin,"$(PRE,undefined):GetDeviceHardware")
+{
+        field( DTYP, "SnmpV2c" )
+        field( INP,  "@$(HOST,undefined) write ICT-MIB::deviceHardware.0" )
+        field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )
+}
+
+# deviceFirmware: string
+record(stringin,"$(PRE,undefined):GetDeviceFirmware")
+{
+        field( DTYP, "SnmpV2c" )
+        field( INP,  "@$(HOST,undefined) write ICT-MIB::deviceFirmware.0" )
+        field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )
+}
+
+# deviceMacAddress: string
+record(stringin,"$(PRE,undefined):GetMacAdd")
+{
+        field( DTYP, "SnmpV2c" )
+        field( INP,  "@$(HOST,undefined) write ICT-MIB::deviceMacAddress.0" )
+        field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )
+}
+
+# systemVoltage: string
+record(ai,"$(PRE,undefined):GetSysVoltage")
+{
+        field( DTYP, "SnmpV2c" )
+        field( INP,  "@$(HOST,undefined) write ICT-MIB::systemVoltage.0" )
+        field( SCAN, "I/O Intr" )
+	field( PINI, "YES")
+}
+
+# systemCurrent: string
+record(ai,"$(PRE,undefined):GetSysCurrent")
+{
+        field( DTYP, "SnmpV2c" )
+        field( INP,  "@$(HOST,undefined) write ICT-MIB::systemCurrent.0" )
+        field( SCAN, "I/O Intr" )
+	field( HIGH, "90" )
+	field( HSV, "MINOR" )
+	field( HIHI, "100" )
+	field( HHSV, "MAJOR" )
+	field( PINI, "YES" )
+}
+
+# alarmName: string
+record(stringin,"$(PRE,undefined):Alarm1:Name" )
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::alarmName.0 " )
+	field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )
+}
+
+# alarmStatus: string
+record(mbbi,"$(PRE,undefined):Alarm1:Status" )
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::alarmStatus.0 " )
+	field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )	
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( TWVL, "3" )
+	field( ZRST, "ALARM INACTIVE" )
+	field( ONST, "ALARM READY" )
+	field( TWST, "ALARM TRIPPED" )
+	field( ZRSV, "NO_ALARM" )
+	field( ONSV, "NO_ALARM" )
+	field( TWSV, "MAJOR" )
+}
+
+# alarmName: string
+record(stringin,"$(PRE,undefined):Alarm2:Name" )
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::alarmName.1 " )
+	field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )
+}
+
+# alarmStatus: string
+record(mbbi,"$(PRE,undefined):Alarm2:Status" )
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::alarmStatus.1 " )
+	field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )	
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( TWVL, "3" )
+	field( ZRST, "ALARM INACTIVE" )
+	field( ONST, "ALARM READY" )
+	field( TWST, "ALARM TRIPPED" )
+	field( ZRSV, "NO_ALARM" )
+	field( ONSV, "NO_ALARM" )
+	field( TWSV, "MAJOR" )
+}
+
+# alarmName: string
+record(stringin,"$(PRE,undefined):Alarm3:Name" )
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::alarmName.2 " )
+	field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )
+}
+
+# alarmStatus: string
+record(mbbi,"$(PRE,undefined):Alarm3:Status" )
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::alarmStatus.2 " )
+	field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )	
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( TWVL, "3" )
+	field( ZRST, "ALARM INACTIVE" )
+	field( ONST, "ALARM READY" )
+	field( TWST, "ALARM TRIPPED" )
+	field( ZRSV, "NO_ALARM" )
+	field( ONSV, "NO_ALARM" )
+	field( TWSV, "MAJOR" )
+}
+
+# alarmName: string
+record(stringin,"$(PRE,undefined):Alarm4:Name" )
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::alarmName.3 " )
+	field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )
+}
+
+# alarmStatus: string
+record(mbbi,"$(PRE,undefined):Alarm4:Status" )
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::alarmStatus.3 " )
+	field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )	
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( TWVL, "3" )
+	field( ZRST, "ALARM INACTIVE" )
+	field( ONST, "ALARM READY" )
+	field( TWST, "ALARM TRIPPED" )
+	field( ZRSV, "NO_ALARM" )
+	field( ONSV, "NO_ALARM" )
+	field( TWSV, "MAJOR" )
+}
+
+# alarmName: string
+record(stringin,"$(PRE,undefined):Alarm5:Name" )
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::alarmName.4 " )
+	field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )
+}
+
+# alarmStatus: string
+record(mbbi,"$(PRE,undefined):Alarm5:Status" )
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP, "@$(HOST,undefined) write ICT-MIB::alarmStatus.4 " )
+	field( SCAN, "I/O Intr" )
+	field( PINI, "YES" )	
+	field( ZRVL, "1" )
+	field( ONVL, "2" )
+	field( TWVL, "3" )
+	field( ZRST, "ALARM INACTIVE" )
+	field( ONST, "ALARM READY" )
+	field( TWST, "ALARM TRIPPED" )
+	field( ZRSV, "NO_ALARM" )
+	field( ONSV, "NO_ALARM" )
+	field( TWSV, "MAJOR" )
+}

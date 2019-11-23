@@ -1,0 +1,25 @@
+# Autosave list for ICT PDU
+$(PRE):Output1A:BreakerStatus
+$(PRE):Output2A:BreakerStatus
+$(PRE):Output3A:BreakerStatus
+$(PRE):Output4A:BreakerStatus
+$(PRE):Output5A:BreakerStatus
+$(PRE):Output6A:BreakerStatus
+$(PRE):Output1B:BreakerStatus
+$(PRE):Output2B:BreakerStatus
+$(PRE):Output3B:BreakerStatus
+$(PRE):Output4B:BreakerStatus
+$(PRE):Output5B:BreakerStatus
+$(PRE):Output6B:BreakerStatus
+$(PRE):Output1A:SetState
+$(PRE):Output2A:SetState
+$(PRE):Output3A:SetState
+$(PRE):Output4A:SetState
+$(PRE):Output5A:SetState
+$(PRE):Output6A:SetState
+$(PRE):Output1B:SetState
+$(PRE):Output2B:SetState
+$(PRE):Output3B:SetState
+$(PRE):Output4B:SetState
+$(PRE):Output5B:SetState
+$(PRE):Output6B:SetState

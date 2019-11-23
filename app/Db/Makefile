@@ -23,6 +23,10 @@ include $(TOP)/configure/CONFIG
 
 # Built from substitution files
 DB += ict.db
+DB += ict24VbusA.db
+DB += ict24VbusB.db
+DB += ict48VbusA.db
+DB += ict48VbusB.db
 
 IOCRELEASE_DB += iocRelease.db
 
