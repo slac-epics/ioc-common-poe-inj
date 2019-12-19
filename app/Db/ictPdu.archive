@@ -8,81 +8,81 @@ $(PRE):GetDeviceMacAdd          600
 $(PRE):GetSysVoltage            10
 $(PRE):GetSysCurrent		1
 #    Bus A archive values
-$(PRE):BusA			10
+$(PRE):BusA.DESC		10
 $(PRE):BusA:Voltage		10
 $(PRE):BusA:Current		1
 #    Output 1A archive values
-$(PRE):Output1A			10
+$(PRE):Output1A.DESC		10
 $(PRE):Output1A:BreakerStatus	1
 $(PRE):Output1A:GetState	10
 $(PRE):Output1A:SetState	10	monitor
 $(PRE):Output1A:Current		1
 #    Output 2A archive values
-$(PRE):Output2A			10
+$(PRE):Output2A.DESC		10
 $(PRE):Output2A:BreakerStatus	1
 $(PRE):Output2A:GetState	10
 $(PRE):Output2A:SetState	10	monitor
 $(PRE):Output2A:Current		1
 #    Output 3A archive values
-$(PRE):Output3A			10
+$(PRE):Output3A.DESC		10
 $(PRE):Output3A:BreakerStatus	1
 $(PRE):Output3A:GetState	10
 $(PRE):Output3A:SetState	10	monitor
 $(PRE):Output3A:Current		1
 #    Output 4A archive values
-$(PRE):Output4A			10
+$(PRE):Output4A.DESC		10
 $(PRE):Output4A:BreakerStatus	1
 $(PRE):Output4A:GetState	10
 $(PRE):Output4A:SetState	10	monitor
 $(PRE):Output4A:Current		1
 #    Output 5A archive values
-$(PRE):Output5A			10
+$(PRE):Output5A.DESC		10
 $(PRE):Output5A:BreakerStatus	1
 $(PRE):Output5A:GetState	10
 $(PRE):Output5A:SetState	10	monitor
 $(PRE):Output5A:Current		1
 #    Output 6A archive values
-$(PRE):Output6A			10
+$(PRE):Output6A.DESC		10
 $(PRE):Output6A:BreakerStatus	1
 $(PRE):Output6A:GetState	10
 $(PRE):Output6A:SetState	10	monitor
 $(PRE):Output6A:Current		1
 #    Bus B archive values
-$(PRE):BusB			10      	
+$(PRE):BusB.DESC		10      	
 $(PRE):BusB:Voltage		10
 $(PRE):BusB:Current		1
 #    Output 1B archive values
-$(PRE):Output1B			10
+$(PRE):Output1B.DESC		10
 $(PRE):Output1B:BreakerStatus	1
 $(PRE):Output1B:GetState	10
 $(PRE):Output1B:SetState	10	monitor
 $(PRE):Output1B:Current		1
 #    Output 2B archive values
-$(PRE):Output2B			10
+$(PRE):Output2B.DESC		10
 $(PRE):Output2B:BreakerStatus	1
 $(PRE):Output2B:GetState	10
 $(PRE):Output2B:SetState	10	monitor
 $(PRE):Output2B:Current		1
 #    Output 3B archive values
-$(PRE):Output3B			10
+$(PRE):Output3B.DESC		10
 $(PRE):Output3B:BreakerStatus	1
 $(PRE):Output3B:GetState	10
 $(PRE):Output3B:SetState	10	monitor
 $(PRE):Output3B:Current		1
 #    Output 4B archive values
-$(PRE):Output4B			10
+$(PRE):Output4B.DESC		10
 $(PRE):Output4B:BreakerStatus	1
 $(PRE):Output4B:GetState	10
 $(PRE):Output4B:SetState	10	monitor
 $(PRE):Output4B:Current		1
 #    Output 5B archive values
-$(PRE):Output5B			10
+$(PRE):Output5B.DESC		10
 $(PRE):Output5B:BreakerStatus	1
 $(PRE):Output5B:GetState	10
 $(PRE):Output5B:SetState	10	monitor
 $(PRE):Output5B:Current		1
 #    Output 6B archive values
-$(PRE):Output6B			10
+$(PRE):Output6B.DESC		10
 $(PRE):Output6B:BreakerStatus	1
 $(PRE):Output6B:GetState	10
 $(PRE):Output6B:SetState	10	monitor
