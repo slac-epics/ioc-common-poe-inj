@@ -6,5 +6,4 @@ endif
 
 include $(TOP)/configure/CONFIG
 DIRS += $(wildcard *ioc*)
-include $(TOP)/configure/RULES_DIRS
-
+include $(EPICS_BASE)/configure/RULES_DIRS

@@ -48,7 +48,7 @@ record(stringin,"$(PRE,undefined):Output1A" )
 	field( DESC, "24V output" )
 }
 
-# outputName: strin
+# outputName: string
 record(stringin,"$(PRE,undefined):Output2A" )
 {
 	field( DTYP, "SnmpV2c" )
