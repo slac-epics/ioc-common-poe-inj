@@ -31,7 +31,7 @@ CROSS_COMPILER_TARGET_ARCHS =
 #INSTALL_LOCATION=<fullpathname>
 
 # Note: Must add $(NET_SNMP)/lib to LD_LIBRARY_PATH in your sioc/<ioc-name>/startup.cmd
-NET_SNMP = /reg/g/pcds/package/net-snmp-5.7.2
+NET_SNMP = /reg/g/pcds/pkg_mgr/release/net-snmp/5.7.2/$(shell csh -c 'setenv PSPKG_RELEASE net-snmp/5.7.2;source /reg/g/pcds/pkg_mgr/etc/set_env.csh ; printenv PSPKG_ARCH')
 
 SHARED_LIBRARIES=YES
 STATIC_BUILD = NO
