@@ -16,8 +16,8 @@ DBD += poe-inj.dbd
 
 # poe-inj.dbd will be made up from these files:
 poe-inj_DBD +=	base.dbd
-poe-inj_DBD +=	iocAdmin.dbd
-poe-inj_DBD +=	asSupport.dbd
+#poe-inj_DBD +=	iocAdmin.dbd
+#poe-inj_DBD +=	asSupport.dbd
 poe-inj_DBD +=	devSnmp.dbd
 
 # <name>_registerRecordDeviceDriver.cpp will be created from <name>.dbd
@@ -28,8 +28,8 @@ poe-inj_SRCS_DEFAULT += poe-injMain.cpp
 #poe-inj_SRCS += dbSubExample.c
 
 # Add any needed libraries
-poe-inj_LIBS += autosave
-poe-inj_LIBS += devIocStats
+#poe-inj_LIBS += autosave
+#poe-inj_LIBS += devIocStats
 poe-inj_LIBS += devSnmp
 poe-inj_LIBS += $(EPICS_BASE_IOC_LIBS)
 
