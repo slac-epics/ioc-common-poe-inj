@@ -10,28 +10,28 @@ include $(TOP)/configure/CONFIG
 
 # build an ioc application
 
-PROD_IOC_Linux = ict
-# ict.dbd will be created and installed
-DBD += ict.dbd
+PROD_IOC_Linux = poe-inj
+# poe-inj.dbd will be created and installed
+DBD += poe-inj.dbd
 
-# ict.dbd will be made up from these files:
-ict_DBD +=	base.dbd
-ict_DBD +=	iocAdmin.dbd
-ict_DBD +=	asSupport.dbd
-ict_DBD +=	devSnmp.dbd
+# poe-inj.dbd will be made up from these files:
+poe-inj_DBD +=	base.dbd
+poe-inj_DBD +=	iocAdmin.dbd
+poe-inj_DBD +=	asSupport.dbd
+poe-inj_DBD +=	devSnmp.dbd
 
 # <name>_registerRecordDeviceDriver.cpp will be created from <name>.dbd
-ict_SRCS += ict_registerRecordDeviceDriver.cpp
-ict_SRCS_DEFAULT += ictMain.cpp
+poe-inj_SRCS += poe-inj_registerRecordDeviceDriver.cpp
+poe-inj_SRCS_DEFAULT += poe-injMain.cpp
 
 # Add locally compiled object code
-#ict_SRCS += dbSubExample.c
+#poe-inj_SRCS += dbSubExample.c
 
 # Add any needed libraries
-ict_LIBS += autosave
-ict_LIBS += devIocStats
-ict_LIBS += devSnmp
-ict_LIBS += $(EPICS_BASE_IOC_LIBS)
+poe-inj_LIBS += autosave
+poe-inj_LIBS += devIocStats
+poe-inj_LIBS += devSnmp
+poe-inj_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 USR_LIBS	+= netsnmp
 SYS_LIBS	+= crypto
