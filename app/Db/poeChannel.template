@@ -1,0 +1,7 @@
+record(longin,"$(PRE):PowerConsumption")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP,  "@$(HOST) public POWER-ETHERNET-MIB::pethMainPseConsumptionPower.$(CH)" )
+	field( SCAN, "1 second" )
+}
+

@@ -22,11 +22,12 @@ include $(TOP)/configure/CONFIG
 # databases, templates, substitutions like this
 
 # Built from substitution files
-DB += ict.db
-DB += ict24VbusA.db
-DB += ict24VbusB.db
-DB += ict48VbusA.db
-DB += ict48VbusB.db
+DB += poe-inj.db
+#DB += ict.db
+#DB += ict24VbusA.db
+#DB += ict24VbusB.db
+#DB += ict48VbusA.db
+#DB += ict48VbusB.db
 
 #IOCRELEASE_DB += iocRelease.db
 

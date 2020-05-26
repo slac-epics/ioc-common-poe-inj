@@ -1,0 +1,15 @@
+file poeTop.template
+{
+	{
+		FOO = "whatever"
+	}
+}
+
+file poeChannel.template
+{
+	pattern
+	{ CH }
+	{  1 }
+	{  2 }
+	{  24 }
+}
