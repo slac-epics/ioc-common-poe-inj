@@ -28,26 +28,26 @@ DB += ict24VbusB.db
 DB += ict48VbusA.db
 DB += ict48VbusB.db
 
-IOCRELEASE_DB += iocRelease.db
+#IOCRELEASE_DB += iocRelease.db
 
 #----------------------------------------------------
 # Create and install (or just install)
 # Archive files, templates, substitutions like this
 #
-ARCHIVE += ictIoc.archive
-ARCHIVE += ictPdu.archive
+#ARCHIVE += ictIoc.archive
+#ARCHIVE += ictPdu.archive
 
 #----------------------------------------------------
 # Create and install (or just install)
 # Autosave request files, templates, substitutions like this
 #
-REQ	+=  ictIoc.req
-REQ	+=  ictPdu.req
+#REQ	+=  ictIoc.req
+#REQ	+=  ictPdu.req
 
 # Nothing to build for autosave, just install from $AUTOSAVE/db
-DB_INSTALLS += $(AUTOSAVE)/db/save_restoreStatus.db
-DB_INSTALLS += $(IOCADMIN)/db/iocSoft.db
-DB_INSTALLS += $(IOCADMIN)/db/devIocInfo.db
+#DB_INSTALLS += $(AUTOSAVE)/db/save_restoreStatus.db
+#DB_INSTALLS += $(IOCADMIN)/db/iocSoft.db
+#DB_INSTALLS += $(IOCADMIN)/db/devIocInfo.db
 
 #install:	showme
 
