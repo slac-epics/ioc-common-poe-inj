@@ -14,9 +14,6 @@
 #CROSS_COMPILER_TARGET_ARCHS = RTEMS-beatnik
 #CROSS_COMPILER_TARGET_ARCHS = RTEMS-uC5282
 #CROSS_COMPILER_TARGET_ARCHS = RTEMS-pc586
-ifeq '$(EPICS_HOST_ARCH)' 'linux-x86_64'
-CROSS_COMPILER_TARGET_ARCHS +=  linux-x86
-endif
 CROSS_COMPILER_TARGET_ARCHS = 
 
 # Set this when your IOC and the host use different paths
@@ -31,7 +28,7 @@ CROSS_COMPILER_TARGET_ARCHS =
 #INSTALL_LOCATION=<fullpathname>
 
 # Note: Must add $(NET_SNMP)/lib to LD_LIBRARY_PATH in your sioc/<ioc-name>/startup.cmd
-NET_SNMP = /reg/g/pcds/pkg_mgr/release/net-snmp/5.7.2/$(shell csh -c 'setenv PSPKG_RELEASE net-snmp/5.7.2;source /reg/g/pcds/pkg_mgr/etc/set_env.csh ; printenv PSPKG_ARCH')
+NET_SNMP = $(PSPKG_ROOT)/release/net-snmp/5.7.2/$(T_A)
 
 SHARED_LIBRARIES=YES
 STATIC_BUILD = NO
