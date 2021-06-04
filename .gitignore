@@ -10,7 +10,8 @@ dbd/
 html/
 include/
 lib/
-templates/
+/templates/
+children/build
 cdCommands
 envPaths
 RELEASE_SITE

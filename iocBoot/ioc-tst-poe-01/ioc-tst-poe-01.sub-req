@@ -1,0 +1,12 @@
+# Autosave file for IOC
+
+# Each evr IOC needs one of these
+file ictIoc.req
+{
+    { IOC = "IOC:TST:POE:01" }
+}
+
+file ictPdu.req
+{
+    { PRE = "TST:POE:01" }
+}

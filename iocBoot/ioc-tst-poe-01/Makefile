@@ -21,12 +21,12 @@ USR_ARCHIVEFLAGS += -V
 #----------------------------------------------------
 # Create and install IOC archive file
 #
-#ARCHIVE += $$IOCNAME.archive
+#ARCHIVE += ioc-tst-poe-01.archive
 
 #----------------------------------------------------
 # Create and install IOC autosave file
 #
-#REQ += $$IOCNAME.req
+#REQ += ioc-tst-poe-01.req
 
 include $(TOP)/configure/RULES.ioc
 -include $(TOP)/configure/RULES.archive
