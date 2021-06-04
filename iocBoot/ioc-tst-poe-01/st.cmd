@@ -1,4 +1,4 @@
-#!/afs/slac.stanford.edu/g/pcds/vol2/users/bhill/git-wa/ioc/common/poe-inj-git/bin/rhel7-x86_64/ict
+#!/afs/slac.stanford.edu/g/pcds/vol2/users/bhill/git-wa/ioc/common/poe-inj-git/bin/rhel6-x86_64/ict
 
 # Run common startup commands for linux soft IOC's
 < $(IOC_COMMON)/All/pre_linux.cmd
