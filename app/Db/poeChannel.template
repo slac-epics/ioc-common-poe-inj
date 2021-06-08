@@ -1,7 +1,30 @@
-record(longin,"$(PRE):PowerConsumption")
+record(longin,"$(PRE):$(CH):PowerConsumption")
 {
 	field( DTYP, "SnmpV2c" )
 	field( INP,  "@$(HOST) public POWER-ETHERNET-MIB::pethMainPseConsumptionPower.$(CH)" )
 	field( SCAN, "1 second" )
+	field( EGU, "Watts" )
 }
+
+record(bi,"$(PRE):$(CH):PowerOperStatus")
+{
+	field( DTYP, "SnmpV2c" )
+	field( INP,  "@$(HOST) public POWER-ETHERNET-MIB::pethMainPseOperStatus.$(CH)" )
+	field( SCAN, "1 second" )
+	field( ZNAM, "Off" )
+	field( ONAM, "On" )
+}
+
+#record(longout,"$(PRE):$(CH):PortEnable")
+#{
+#	field( DTYP, "SnmpV2c" )
+#	field( OUT,  "@$(HOST) -Ir private POWER-ETHERNET-MIB::pethMainPseAdminEnable.0.$(CH)" )
+#}
+
+#record(longin,"$(PRE):$(CH):PortEnable_RBV")
+#{
+#	field( DTYP, "SnmpV2c" )
+#	field( INP,  "@$(HOST) -Ir public POWER-ETHERNET-MIB::pethMainPseAdminEnable.0.$(CH)" )
+#	field( SCAN, "1 second" )
+#}
 
