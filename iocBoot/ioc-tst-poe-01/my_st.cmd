@@ -37,6 +37,7 @@ SNMP_DRV_DEBUG( 1 )
 # Each SNMP query message could query multi variables.
 # This number needs to be the minimum one of all your agents
 snmpMaxVarsPerMsg( 60 )
+var snmpCheckRanges 1
 
 # Load soft ioc related record instances
 #dbLoadRecords( "db/iocSoft.db",				"IOC=$(IOC_PV)" )
